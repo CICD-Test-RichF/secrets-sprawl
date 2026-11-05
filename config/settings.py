@@ -1,6 +1,8 @@
-"""Application settings (FAKE values, committed by mistake on purpose)."""
+"""Application settings. Secrets now come from the environment."""
 
-AWS_ACCESS_KEY_ID = "AKIAIOSFODNN7EXAMPLE"
-AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
-DB_PASSWORD = "FakeP@ssw0rd-ghassess-7731"
-API_TOKEN = "ghassess_fake_tok_3c9f1a7e5b2d8c4f6a0e9b1d7c3f5a2e"
+import os
+
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+DB_PASSWORD = os.environ.get("DB_PASSWORD")
+API_TOKEN = os.environ.get("API_TOKEN")
